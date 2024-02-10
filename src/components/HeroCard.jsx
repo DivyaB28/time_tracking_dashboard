@@ -1,5 +1,12 @@
+import { useContext } from "react";
 import heroImg from "../../images/image-jeremy.png";
+import { TimelineContext } from "../utils/contexts";
+
 const HeroCard = () => {
+  const timelineContext = useContext(TimelineContext);
+
+  const { timeline = "", handleTimelineSelection = () => {} } = timelineContext;
+
   return (
     <div className="flex flex-col rounded-lg bg-light_blue text-pale_blue">
       <article className="flex flex-row gap-5 p-6 bg-blue rounded-lg items-center">
@@ -15,10 +22,36 @@ const HeroCard = () => {
           </h1>
         </article>
       </article>
-      <div className="flex flex-row justify-between p-6 font-light text-lg">
-        <button>Daily</button>
-        <button>Weekly</button>
-        <button>Monthly</button>
+      <div className="flex flex-row justify-between p-6 font-light text-lg text-pale_blue">
+        <button
+          aria-label="on click timeline change"
+          onClick={(e) => {
+            e.preventDefault();
+            handleTimelineSelection("daily");
+          }}
+          className={`${timeline === "daily" ? "text-white" : ""}`}
+        >
+          Daily
+        </button>
+        <button
+          aria-label="on click timeline change"
+          onClick={(e) => {
+            e.preventDefault();
+            handleTimelineSelection("weekly");
+          }}
+          className={`${timeline === "weekly" ? "text-white" : ""}`}
+        >
+          Weekly
+        </button>
+        <button
+          aria-label="on click timeline change"
+          onClick={() => {
+            handleTimelineSelection("monthly");
+          }}
+          className={`${timeline === "monthly" ? "text-white" : ""}`}
+        >
+          Monthly
+        </button>
       </div>
     </div>
   );

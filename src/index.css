@@ -7,15 +7,21 @@
 @layer base {
   html {
     font-family: "Rubik", sans-serif;
-    overflow: hidden;
     scroll-behavior: smooth;
   }
   body {
     min-height: 100vh;
-    overflow-x: hidden;
     position: relative;
     font-size: 1.125rem;
     color: white;
+  }
+}
+
+@layer components {
+  .icon-work {
+    background-image: url(../images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: 91% -6%;
   }
 }
 
