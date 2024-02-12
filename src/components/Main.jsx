@@ -38,6 +38,7 @@ const Main = () => {
                   <TrackerCard
                     activityObj={activity}
                     timelineSelected={timeline}
+                    index={index}
                   />
                 </li>
               ))}
