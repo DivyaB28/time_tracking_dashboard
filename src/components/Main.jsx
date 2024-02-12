@@ -25,11 +25,13 @@ const Main = () => {
   return (
     <>
       <TimelineContext.Provider value={{ timeline, handleTimelineSelection }}>
-        <main className="grid max-w-[69.375] gap-4 md:grid-rows-3 md:grid-flow-col bg-very_dark_blue px-6 py-14">
-          <div role="article" className="lg:row-span-3">
-            <HeroCard />
-          </div>
-          <ul role="list">
+        <h1 className="sr-only">Time tracking dashboard</h1>
+        <main className="grid gap-5 max-w-[69.375rem] lg:grid-cols-[0.9273fr_3fr] px-6 py-14 mx-auto">
+          <HeroCard />
+          <ul
+            role="list"
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[1.875rem]"
+          >
             {userData &&
               userData.map((activity, index) => (
                 <li role="lit of activities" key={index}>
