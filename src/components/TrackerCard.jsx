@@ -81,7 +81,7 @@ const TrackerCard = ({ activityObj, timelineSelected, index }) => {
         </div>
         {timeframes[timelineSelected] && (
           <div className="flex flex-row justify-between items-center flex-wrap pt-4">
-            <h1 className="font-hours font-light">{current}hrs</h1>
+            <h3 className="font-hours font-light">{current}hrs</h3>
             <p className="text-sm font-thin text-pale_blue p-1">
               {getPreviousTimeline()}
             </p>

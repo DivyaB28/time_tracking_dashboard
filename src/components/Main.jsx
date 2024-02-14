@@ -25,15 +25,12 @@ const Main = () => {
     <>
       <TimelineContext.Provider value={{ timeline, handleTimelineSelection }}>
         <h1 className="sr-only">Time tracking dashboard</h1>
-        <main className="grid gap-5 max-w-[69.375rem] lg:grid-cols-[0.9273fr_3fr] px-6 py-14 mx-auto">
+        <main className="grid gap-5 max-w-[69.375rem] lg:grid-cols-[0.9273fr_3fr] lg:flex lg:items-center lg:justify-center px-6 py-14 mx-auto">
           <HeroCard />
-          <ul
-            role="list"
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[1.875rem]"
-          >
+          <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[1.875rem]">
             {userData &&
               userData.map((activity, index) => (
-                <li role="lit of activities" key={index}>
+                <li role="list of activities" key={index}>
                   <TrackerCard
                     activityObj={activity}
                     timelineSelected={timeline}
