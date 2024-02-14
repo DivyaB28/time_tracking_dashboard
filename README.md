@@ -31,8 +31,6 @@ This is a dashboard where users should be able to:
 
 ![Solution to Desktop design](./design/desktop-solution.png)
 
-![Solution to mobile design](./design/mobile-solution.gif)
-
 ## My process
 
 ### Built with
