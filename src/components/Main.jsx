@@ -2,14 +2,13 @@ import { TimelineContext } from "../utils/contexts";
 import HeroCard from "./HeroCard";
 import TrackerCard from "./TrackerCard";
 import { useEffect, useState } from "react";
-const PATH = "../../data.json";
 
 const Main = () => {
   const [userData, setUserData] = useState([]);
   const [timeline, setTimeline] = useState("weekly");
 
   const fetchData = () => {
-    fetch(PATH)
+    fetch("../../data.json")
       .then((response) => response.json())
       .then((data) => setUserData([...data]));
   };
