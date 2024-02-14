@@ -13,7 +13,9 @@ const HeroCard = () => {
         <img
           alt="hero profile"
           src={heroImg}
-          className="w-16 rounded-full justify-start border-2 border-white border-solid lg:w-[5.25rem] "
+          width={64}
+          height={64}
+          className="rounded-full justify-start border-2 border-white border-solid lg:w-[5.25rem] "
         />
 
         <p className="font-light text-[0.937rem] flex flex-col text-pale-blue ml-[0.25rem]">

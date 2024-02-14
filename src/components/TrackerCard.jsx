@@ -32,7 +32,6 @@ const TrackerCard = ({ activityObj, timelineSelected, index }) => {
   };
 
   const toggleActive = () => {
-    console.log(isActive);
     setIsActive(!isActive);
   };
 
